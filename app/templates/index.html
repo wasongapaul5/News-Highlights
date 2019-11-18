@@ -1,16 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    {% if title %}
-    <title> {{ title }} </title>
-    {% else %}
-    <title> Welcome to the best News Highights Site</title>
-    {% endif %}
-</head>
-<body>
-    
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block content %}
+{% for highlights in top %}
+
+<div class="card" style="width: 18rem;">
+    <img src="{{highlights.urlToImage}}" class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 class="card-title">{{highlights.title}}</h5>
+        <p class="card-text">{{highlights.description}}</p>
+        <a href="{{highlights.url}}" class="btn btn-primary">VISIT PAGE</a>
+    </div>
+</div>
+
+{% endfor %}
+{% endblock %}
