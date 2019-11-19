@@ -10,7 +10,7 @@ def index():
     # getting top headlines
     top_headlines = get_highlights()
     print(top_headlines)
-    title = 'Home - HOT NEWS AND BLOSSY GOSSIP'
+    title = 'Home - WORLD NEWS'
     return render_template('index.html',title = title, top = top_headlines )
 @app.route('/news/<news_id>')
 def news(news_id):

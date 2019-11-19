@@ -24,7 +24,7 @@ def get_highlights():
             news_results = process_results(news_results_list)
     return news_results
 
-    
+
 def process_results(news_list):
     '''
     function that processes the news result and transform them into a list of objects
@@ -47,3 +47,6 @@ def process_results(news_list):
             news_object = Articles(id,name,author,title,description,url,urlToImage,publishedAt)
             news_results.append(news_object)
     return news_results
+
+
+
