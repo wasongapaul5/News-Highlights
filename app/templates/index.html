@@ -2,24 +2,39 @@
 
 {% block styles%}
 {{ super() }}
-<link rel="stylesheet" href="{{url_for('static',filename='css/styles.css')}}">
+<link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
 {% endblock %}
+
+
 
 {% block content %}
 {% for highlights in top %}
 <div class="container">
-    <div class="row">
-        <div class="col-md-6">
-            <div class="card" style="width: 18rem">
-                <img src="{{highlights.urlToImage}}" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">{{highlights.title}}</h5>
-                    <p class="card-text">{{highlights.description}}</p>
-                    <a href="{{highlights.url}}" class="btn btn-danger">VISIT PAGE</a>
-                </div>
+    <div class="card" style="width: 18rem;height: 20rem; display:flex; justify-content:space-between; float:right">
+            <img src="{{highlights.urlToImage}}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{highlights.title}}</h5>
+                <p class="card-text">{{highlights.description}}</p>
+                <a href="{{highlights.url}}" class="btn btn-danger">VISIT PAGE</a>
             </div>
         </div>
-    </div>
 </div>
+<style>
+    body{
+  background-image:url('https://cdn.pixabay.com/photo/2015/12/01/20/28/fall-1072821__340.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+    
+.card{
+    padding:20px;
+    margin:20px;
+    justify-content:space-evenly;
+    display:flex;
+    height:300px;
+    width:200px;
+}
+
+</style>
 {% endfor %}
 {% endblock %}

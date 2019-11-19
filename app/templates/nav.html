@@ -3,9 +3,7 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-body {
-  font-family: "Lato", sans-serif;
-}
+
 
 .sidebar {
   height: 80%;
@@ -27,7 +25,8 @@ body {
   text-decoration: none;
   font-size: 30px;
   color: black;
-  display: block;
+  display: flex;
+  box-shadow: 20px 20px 20px 0;
   transition: 0.3s;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: bolder;
@@ -37,14 +36,7 @@ body {
   color: #f1f1f1;
 }
 
-.sidebar .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-  font-weight: bold;
-}
+
 
 .openbtn {
   font-size: 20px;
@@ -54,16 +46,21 @@ body {
   padding: 10px 15px;
   border: none;
   font-weight: bold;
+  
 }
 
+
+
 .openbtn:hover {
-  background-color: #444;
+  background-color:yellow;
+  
 }
 
 #main {
   transition: margin-left .5s;
   padding: 16px;
 }
+
 
 
 </style>

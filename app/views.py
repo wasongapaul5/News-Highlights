@@ -1,6 +1,7 @@
 from flask import render_template
 from app import app
 from .request import get_highlights
+
 # views
 @app.route('/')
 def index():
@@ -18,4 +19,3 @@ def news(news_id):
     view movie page function that returns the news highlight page and its data
     '''
     return render_template('news.html',id=news_id)
-
