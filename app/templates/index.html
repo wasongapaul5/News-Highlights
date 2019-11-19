@@ -1,5 +1,12 @@
 {% extends 'base.html' %}
 
+{% block styles%}
+    {{ super() }}
+    <link rel="stylesheet" href="{{url_for('static',filename='css/styles.css')}}">
+{% endblock %}
+
+
+
 {% block content %}
 {% for highlights in top %}
 
@@ -8,7 +15,7 @@
     <div class="card-body">
         <h5 class="card-title">{{highlights.title}}</h5>
         <p class="card-text">{{highlights.description}}</p>
-        <a href="{{highlights.url}}" class="btn btn-primary">VISIT PAGE</a>
+        <a href="{{highlights.url}}" class="btn btn-danger">VISIT PAGE</a>
     </div>
 </div>
 

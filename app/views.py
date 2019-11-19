@@ -18,3 +18,4 @@ def news(news_id):
     view movie page function that returns the news highlight page and its data
     '''
     return render_template('news.html',id=news_id)
+
