@@ -6,8 +6,8 @@
 - https://github.com/wasongapaul5/News-Highlights.git
 
 ## Technologies used
-HTML
-CSS
+HTML5
+CSS3
 BOOTSTRAP
 FLASK
 
