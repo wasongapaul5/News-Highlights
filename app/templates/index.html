@@ -10,32 +10,45 @@
 {% block content %}
 {% for highlights in top %}
 <div class="container">
+
     <div class="card" style="width: 18rem;height: 20rem; display:flex; justify-content:space-between; float:right">
-            <img src="{{highlights.urlToImage}}" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">{{highlights.title}}</h5>
-                <p class="card-text">{{highlights.description}}</p>
-                <a href="{{highlights.url}}" class="btn btn-danger">VISIT PAGE</a>
-            </div>
+        <img src="{{highlights.urlToImage}}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{highlights.title}}</h5>
+            <p class="card-text">{{highlights.description}}</p>
+            <a href="{{highlights.url}}" class="btn btn-danger">VISIT PAGE</a>
         </div>
+    </div>
+
 </div>
 <style>
-    body{
-  background-image:url('https://cdn.pixabay.com/photo/2015/12/01/20/28/fall-1072821__340.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-    
-.card{
-    padding:20px;
-    margin:20px;
-    justify-content:space-evenly;
-    display:flex;
-    height:300px;
-    box-shadow: 10px 10px 10px 0;
-    width:200px;
-}
+    body {
+        background-image: url('https://cdn.pixabay.com/photo/2015/12/01/20/28/fall-1072821__340.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
 
+    .card {
+        padding: 20px;
+        margin: 20px;
+        justify-content: space-evenly;
+        display: flex;
+        height: 500%;
+        box-shadow: 10px 20px 10px 0 rgb(3, 1, 1);
+        width: 200px;
+    }
+
+    .overlay {
+        background-color: black;
+    }
+
+    .card-body{
+        padding:20px;
+    }
+
+    .btn{
+        text-align: center;
+    }
 </style>
 {% endfor %}
 {% endblock %}

@@ -22,7 +22,7 @@
  ## Copyright 
 - wasonga paul
 
-##  Licence
+## MEM Licence
 - MIT Licence
 Copyright (c) [2019] [News-HIghlights].
 
